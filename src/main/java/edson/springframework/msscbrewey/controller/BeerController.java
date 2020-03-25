@@ -25,14 +25,14 @@ public class BeerController {
         return new ResponseEntity<>(beerService.getBeerId(beerId), HttpStatus.OK);
     }
 
-    /*@PostMapping
+    @PostMapping
     public ResponseEntity<BeerDto> handlePost(@RequestBody BeerDto beerDto){
         BeerDto saveBeerDto = beerService.saveNewBeer(beerDto);
 
         HttpHeaders headers = new HttpHeaders();
         headers.add("Location","http://localhost://api/v1/beer"+saveBeerDto.getId().toString());
         return new ResponseEntity<>(headers , HttpStatus.CREATED);
-    }*/
+    }
 
 
 }
