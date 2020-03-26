@@ -1,10 +1,12 @@
 package edson.springframework.msscbrewey.Services;
 
 import edson.springframework.msscbrewey.web.model.BeerDto;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;
 
 import java.util.UUID;
 
+@Slf4j
 @Service
 public class BeerServiceImpl implements BeerService {
 
@@ -27,5 +29,11 @@ public class BeerServiceImpl implements BeerService {
     public void updateBeer(UUID beerId, BeerDto beerDto) {
         //todo impl - would add a real impl to update beer
 
+    }
+
+    @Override
+    public void deleteById(UUID beerId) {
+        //todo impl - would you add real impl to delete de beer
+        log.debug("Deleting a beer...");
     }
 }
